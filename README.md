@@ -17,9 +17,11 @@ run the following command to run the app:
 ```bash
 $ docker-compose -f docker-compose.yml up --build -V
 
+## Client URL
 the client can be accessed with: http://localhost:1337 
 
 
-
+## stay in touch
 - Author - [Abubaker Enayet](abubaker.enayet@gmail.com)
+- LinkedIn - (https://www.linkedin.com/in/abubaker-enayet-b1385276)
 
