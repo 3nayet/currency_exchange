@@ -1,0 +1,53 @@
+
+#history-data-component{
+    padding: 35px 50px;
+}
+.exchange-type  {
+    font-size: 16px;
+    font-weight: 500;
+  }
+
+.Price-exchange{
+    @extend .exchange-type;
+    color: #6368DF;
+    
+}
+
+.price-live{
+    @extend .exchange-type;
+    color: #5DBE7E;
+}
+
+.rdt_Table{
+    .rdt_TableHeadRow{
+        background-color: #EEEEEE;
+    }
+}
+
+.history-filters-form{
+    display: flex;
+    margin-bottom: 50px;
+    input{
+        padding: 15px;
+        margin: 10px 15px 10px 0px;
+    }
+}
+
+.react-datepicker-popper {
+    z-index: 9999 !important;
+}
+
+#filterButton{
+    background-color: transparent;
+    border: none;
+    color: #6368DF;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 10px;
+    margin: 30px 0px;
+    border: 1px solid #6368DF;
+    width: 90px;
+}

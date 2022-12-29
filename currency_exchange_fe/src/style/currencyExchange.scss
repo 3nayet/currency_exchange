@@ -1,0 +1,29 @@
+$green: #49CD5E;
+
+.snack-bar-class{
+    width: 100%;
+    background-color: $green;
+    justify-content: center;
+}
+.snack-bar{
+.MuiSnackbarContent-root{
+    width: 100%;
+    .MuiSnackbar-anchorOriginBottomCenter{
+        background-color: green;
+        justify-content: center;
+    }
+}
+}
+
+.status-bar{
+    height: 32px;
+    width: 100%;
+    background: $green;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+}
+

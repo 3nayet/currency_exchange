@@ -1,0 +1,54 @@
+version: "3.7"
+services:
+  frontend:
+    container_name: frontend
+    stdin_open: true
+    build:
+      dockerfile: Dockerfile
+      context: ./currency_exchange_fe
+    volumes:
+      - ./currency_exchange_fe:/app
+      - /app/node_modules
+    ports: 
+      - "1337:80"
+    networks:
+      - mern-app
+    depends_on:
+      - api-server
+  api-server:
+    container_name: be
+    build:
+      context: ./currency_exchange_be
+      target: development
+      args:
+        SERVER_PORT: ${SERVER_PORT}
+        WEBSOCKET_PORT: ${WEBSOCKET_PORT}
+        CURR_RATE_INTERVAL_MILLS: ${CURR_RATE_INTERVAL_MILLS}
+    volumes:
+      - ./currency_exchange_be:/app
+      - /app/node_modules
+    command: npm run start:debug
+    env_file:
+      - .env
+    ports:
+      - ${SERVER_PORT}:${SERVER_PORT}
+      - ${WEBSOCKET_PORT}:${WEBSOCKET_PORT}
+      - 9229:9229
+    networks:
+      - mern-app
+    depends_on:
+      - mongo
+  mongo:
+    image: mongo:3.6.19-xenial
+    ports:
+      - "27017:27017"
+    networks:
+      - mern-app
+    volumes:
+      - mongo-data:/data/db
+networks:
+  mern-app:
+    driver: bridge
+volumes:
+  mongo-data:
+    driver: local

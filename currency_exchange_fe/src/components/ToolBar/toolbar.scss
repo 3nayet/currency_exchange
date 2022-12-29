@@ -1,0 +1,33 @@
+body{
+    color: #ddd;
+}
+h1{
+    color: black;
+    text-align: start;
+}
+.toolbar-class{
+    padding: 35px 50px;
+    box-shadow: 0 1em 1em -1em rgba(0, 0, 0, .25);
+}
+.currency-exchange-form{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    label{
+        font-size: 13px;
+        font-weight: 500;
+    }
+}
+
+#saveButton{
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 10px;
+    margin: 22px 0px;
+}

@@ -1,0 +1,38 @@
+.group{
+    color: black;
+    width: 35%;
+    margin: 0 0 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    border-radius: 15px;
+    .form-input-group{
+        width: 40%;
+    }
+}
+input,select{
+    background: none;
+    border:1px solid lightgrey;
+    border-radius: 5px;
+}
+input{
+    padding-left: 10px;
+}
+select{
+    padding: 15px;
+}
+.form-input-group{
+    input, select{
+        padding: 15px;
+        width: 100%;
+    }
+    .input-label{
+        margin-bottom: 5px;
+        color: #ddd;
+    }
+}
+.no-scroll::-webkit-scrollbar {display:none;}
+.no-scroll::-moz-scrollbar {display:none;}
+.no-scroll::-o-scrollbar {display:none;}
+.no-scroll::-google-ms-scrollbar {display:none;}
+.no-scroll::-khtml-scrollbar {display:none;}
